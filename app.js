@@ -8,6 +8,7 @@ const app = new express();
 const shipmentsRoutes = require("./routes/shipments");
 
 app.use(express.json());
+
 app.use("/shipments", shipmentsRoutes);
 
 
