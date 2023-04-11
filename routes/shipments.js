@@ -6,7 +6,7 @@ const router = new express.Router();
 
 const { shipProduct } = require("../shipItApi");
 
-/** POST /ship
+/** POST /shipments
  *
  * VShips an order coming from json body:
  *   { productId, name, addr, zip }
