@@ -20,8 +20,11 @@ const { shipProduct } = require("../shipItApi");
 router.post("/", async function (req, res, next) {
 
   const result = jsonschema.validate(
-    req.body, orderschema, { required: true });
-    // TODO: change input to match doc string - currently missing "order:"
+    req.body,
+    orderschema,
+    { required: true }
+  );
+  // TODO: change input to match doc string - currently missing "order:"
   if (!result.valid) {
     // pass validation errors to error handler
     //  (the "stack" key is generally the most useful)
